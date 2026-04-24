@@ -1,2 +1,4 @@
 ask-sdk-core==1.11.0
 openai==1.6.1
+# openai 1.6.x passa `proxies` ao httpx; httpx 0.28+ removeu o argumento (quebra import na Lambda).
+httpx>=0.24.0,<0.28.0
